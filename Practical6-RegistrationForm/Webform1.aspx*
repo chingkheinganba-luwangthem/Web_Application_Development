@@ -1,0 +1,117 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="RegistrationForm.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+               <asp:Label ID="Label1" runat="server" Text="Name: "></asp:Label>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <asp:TextBox ID="txname" runat="server"></asp:TextBox>
+        </div>
+            
+        <div>
+               <asp:Label ID="Label2" runat="server" Text="Address:  "></asp:Label>
+               &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+               <asp:TextBox ID="txaddress" runat="server"></asp:TextBox>
+        </div>
+
+        <div>
+             <asp:Label ID="Label3" runat="server" Text="ContactNo:  "></asp:Label>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;<asp:TextBox ID="txcontactNo" runat="server"></asp:TextBox>
+        </div>
+ 
+        <div>
+             <asp:Label ID="Label7" runat="server" Text="Email:  "></asp:Label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:TextBox ID="txemail" runat="server"></asp:TextBox>
+        </div>
+
+        <div>
+            
+              <asp:Label ID="Label4" runat="server" Text="Gender:  "></asp:Label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <asp:RadioButton ID="txgender" runat="server"  Text ="Male" GroupName="mygroup" Checked="true"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <asp:RadioButton ID="Radiobutton2" runat="server" Text="Female" GroupName="mygroup"/>
+        </div>
+
+        <div>
+             <asp:Label ID="Label5" runat="server" Text="DOB: "  ></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txdob" runat="server"></asp:TextBox>
+        </div>
+
+        <div>
+              <asp:Label ID="Label8" runat="server" Text="City:"></asp:Label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <asp:DropDownList ID="txcity" runat="server"> 
+              <asp:ListItem ID ="ListItem1" runat="server" Text="Vadodara"></asp:ListItem>
+              <asp:ListItem ID ="ListItem2" runat="server" Text="Surat"></asp:ListItem>
+              <asp:ListItem ID ="ListItem3" runat="server" Text="Ahmedabad"></asp:ListItem>
+ 
+             </asp:DropDownList>
+        </div>
+
+        <div>
+             <asp:Label ID="Label9" runat="server" Text="PinCode"></asp:Label>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+             <asp:TextBox ID="txpinCode" runat="server"></asp:TextBox>
+        </div>
+
+        <div>
+             
+        <asp:Label ID="Label6" runat="server" Text="Category: "></asp:Label>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <asp:CheckBox ID="Checkbox1" runat="server"  Text="General"/> 
+            <asp:CheckBox ID="Checkbox2" runat="server" Text="OBC"/> 
+            <asp:CheckBox ID="Checkbox3" runat="server" Text="SC" /><br />
+        </div>
+
+        <div>
+            
+          <asp:Label ID="Label10" runat="server" Text="Hobbies"></asp:Label><br />
+          <asp:CheckBox ID="txhobbies1" runat="server" Text="Reading"/><br />
+          <asp:CheckBox ID="txhobbies2" runat="server" Text="Playing" /><br />
+          <asp:CheckBox ID="txhobbies3" runat="server" Text="Singing" /><br />
+        </div>
+
+        <div>
+             
+         <asp:Button ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" />
+        &nbsp;&nbsp;&nbsp; 
+          
+        </div>
+      
+        
+        <br /> <hr />
+        <center>
+            <br />
+            <div id="output" runat="server" visible="false">
+                <h2> Registration Details</h2>
+                      <p> <strong> Name:</strong> <asp:Label ID="otName" runat="server"> </asp:Label></p>
+                     <p> <strong> Address:</strong> <asp:Label ID="otAddress" runat="server"> </asp:Label></p>
+                     <p> <strong> Contact</strong> <asp:Label ID="otContact" runat="server"> </asp:Label></p>
+                     <p> <strong> Email:</strong> <asp:Label ID="otEmail" runat="server"> </asp:Label></p>
+                     <p> <strong> Gender:</strong> <asp:Label ID="otGender" runat="server"> </asp:Label></p>
+                     <p> <strong> DOB:</strong> <asp:Label ID="otDOB" runat="server"> </asp:Label></p>
+                     <p> <strong> City:</strong> <asp:Label ID="otCity" runat="server"> </asp:Label></p>
+                     <p> <strong> Category:</strong> <asp:Label ID="otCategory" runat="server"> </asp:Label></p>
+                     <p> <strong> PinCode:</strong> <asp:Label ID="otPinCode" runat="server"> </asp:Label></p>
+                     <p> <strong> Hobbies:</strong> <asp:Label ID="otHobbies" runat="server"> </asp:Label></p>
+
+                
+
+
+            </div>
+        </center>
+
+       
+    </form>
+</body>
+</html>
